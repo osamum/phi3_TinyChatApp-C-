@@ -144,3 +144,23 @@ DirectML 用モデルを使用するための具体的な手順は以下のと�
 
 ここまでの手順で DirectML 用の Phi-3 モデルを使用したシンプルなチャットアプリケーションが動作することを確認できました。
 
+<br>
+
+## 備考
+
+このサンプルは以下のサンプルを元にコードを簡略化し、手順を追加したものです。
+
+* [Generate() API C# example](https://github.com/microsoft/onnxruntime-genai/tree/main/examples/csharp/HelloPhi)
+
+<br>
+
+## 参考
+
+* [Phi-3- a microsoft Collections](https://huggingface.co/collections/microsoft/phi-3-6626e15e9585a200d2d761e3)
+
+
+* [ONNX Runtime Generative AI を使用する Windows アプリで Phi3 やその他の言語モデルの使用を開始する](https://learn.microsoft.com/ja-jp/windows/ai/models/get-started-models-genai)
+
+* [ONNX Runtime generate() API](https://onnxruntime.ai/docs/genai/)
+
+* [Microsoft.ML.OnnxRuntimeGenAI](https://www.nuget.org/packages/Microsoft.ML.OnnxRuntimeGenAI/)
