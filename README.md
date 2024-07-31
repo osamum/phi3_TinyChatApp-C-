@@ -1,9 +1,9 @@
-# ONNX 形式の Phi-3 モデルを使用したシンプルなチャットアプリケーション (C#)
+# ONNX 形式の Phi-3 モデルを使用したシンプルなチャットボット アプリケーション (C#)
 
 ## 概要
-このサンプルは、ONNX 形式の Phi-3 モデルを使用したシンプルなチャットアプリケーションのサンプルです。
+このサンプルは、ONNX 形式の Phi-3 モデルを使用したシンプルなチャットボット アプリケーションのサンプルです。
 
-コンソールで動作するチャットアプリケーションで、ユーザーが入力したテキストを ONNX 形式の Phi-3 モデルに入力し、その結果を表示します。
+コンソール アプリケーションとして動作し、ユーザーが入力したテキストを ONNX 形式の Phi-3 モデルに入力し、その結果を表示します。
 
 ## 前提条件
 
@@ -15,7 +15,7 @@
 
 - [**huggingface-cli**](https://huggingface.co/docs/huggingface_hub/main/en/guides/cli)
 
-    huggingface から Phi-3 モデルをダウンロードするのに使用します。手動でのダウンロードする方法をご存じの場合は不要です。
+    [huggingface](https://huggingface.co/) から [Phi-3 モデル](https://huggingface.co/collections/microsoft/phi-3-6626e15e9585a200d2d761e3)をダウンロードするのに使用します。手動でダウンロードする方法をご存じの場合は不要です。
 
     huggingface-cli のインストールには Python が必要です。Python がインストールされていない場合はインストールコマンドを実行する前に、[**Python**](https://www.python.org/downloads/) をインストールしてください。
 
@@ -28,6 +28,12 @@
     ```PowerShell
     huggingface-cli --help
     ```
+<br>
+
+## 目次
+
+- [Phi-3 モデルのダウンロード](#phi-3-%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89)
+
 <br>
 
 ## Phi-3 モデルのダウンロード
@@ -48,7 +54,7 @@ huggingface-cli download microsoft/Phi-3-mini-4k-instruct-onnx --include cpu_and
 
 上記、特定のハードウェア環境に最適化されたモデルを使用する場合はアプリケーションの参照設定を変更する必要があります。なお、これについては後述します。
 
-## プロジェクトの準備
+## プロジェクトの準備と実行
 
 プロジェクトのビルドから実行までの手順は以下のとおりです。
 
