@@ -69,7 +69,7 @@ huggingface-cli download microsoft/Phi-3-mini-4k-instruct-onnx --include cpu_and
 
 2. ソリューション エクスプローラーで `OnnxChatApp` プロジェクトを右クリックし、**NuGet パッケージの復元**を選択します
 
-3. 画面右のソリューション エクスプローラーでフォルダ `onnx-models\ph3\mini` を展開し、ダウンロードした Phi-3 モデルと関連ファイル一式をコピーします
+3. 画面右のソリューション エクスプローラーでフォルダ `onnx-models\ph3\mini` を展開し(※フォルダーがない場合は作成してください)、ダウンロードした Phi-3 モデルと関連ファイル一式をコピーします
 
     <img src="images/solutionExplorer_model.png" width="700px">
     
