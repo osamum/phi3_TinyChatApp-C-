@@ -34,6 +34,10 @@
 
 - [Phi-3 モデルのダウンロード](#phi-3-%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89)
 
+- [プロジェクトの準備と実行](#%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E6%BA%96%E5%82%99%E3%81%A8%E5%AE%9F%E8%A1%8C)
+
+- [ハードウェア アクセラレーションの使用](#%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2-%E3%82%A2%E3%82%AF%E3%82%BB%E3%83%A9%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E4%BD%BF%E7%94%A8)
+
 <br>
 
 ## Phi-3 モデルのダウンロード
@@ -45,6 +49,7 @@
 ```PowerShell
 huggingface-cli download microsoft/Phi-3-mini-4k-instruct-onnx --include cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/* --local-dir models
 ```
+
 ダウンロードが完了すると、作業フォルダ下の `models\cpu_and_mobile\cpu-int4-rtn-block-32-acc-level-4` ディレクトリにモデルとモデルを動作させるのに必要なファイル一式が保存されます。
 
 今回はハードウェア アクセラレーションを使用しないモデルをダウンロードしましたが、使用するハードウェア環境に最適化された以下のモデルも用意されています。
@@ -53,6 +58,8 @@ huggingface-cli download microsoft/Phi-3-mini-4k-instruct-onnx --include cpu_and
 - [**CUDA 用**](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-onnx/tree/main/cuda)
 
 上記、特定のハードウェア環境に最適化されたモデルを使用する場合はアプリケーションの参照設定を変更する必要があります。なお、これについては後述します。
+
+<br>
 
 ## プロジェクトの準備と実行
 
@@ -103,7 +110,14 @@ Phi-3 モデルは、ハードウェア アクセラレーションを使用す�
 
 ここからは DirectML 用のモデルを使用する場合を例に説明します。
 
-具体的な手順は以下のとおりです。
+DirectML (Direct Machine Learning) は、機械学習 (ML) 向けの低水準 API であり、すべての DirectX 12 と互換性のあるハードウェアによってサポートされているため特定のハードウェアベンダーのハードウェアに依存しません。つまり、 DirectX 12 をサポートするグラフィックカードを使用している環境であれば GPU アクセラレーションが可能です。
+
+詳しくは以下のドキュメントをご参照ください。
+
+* [DirectML の概要](https://learn.microsoft.com/ja-jp/windows/ai/directml/dml)
+
+
+DirectML 用モデルを使用するための具体的な手順は以下のとおりです。
 
 1. 以下のコマンドを実行して [DirectML 用に最適化された Phi-3-mini モデル](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-onnx/tree/main/directml)をダウンロードします
 
@@ -114,7 +128,7 @@ Phi-3 モデルは、ハードウェア アクセラレーションを使用す�
 
 2. プロジェクトのフォルダ `onnx-models\ph3\mini` の内容をダウンロードした DirectML 用の Phi-3 モデルと関連ファイル一式に置き換えます
 
-3. 画面右の **ソリューション エクスプローラー** で **依存関係** のツリーを展開し、パッケージ `Microsoft.ML.OnnxRuntimeGenAI` を右クリックして削除します
+3. 画面右の \[ソリューション エクスプローラー\] で \[依存関係\] のツリーを展開し、パッケージ `Microsoft.ML.OnnxRuntimeGenAI` を右クリックして削除します
 
     <img src="images/DeleteOnnx_GenAI.png" width="700px">
 
