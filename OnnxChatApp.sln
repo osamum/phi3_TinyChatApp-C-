@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnnxChatApp", "OnnxChatApp\OnnxChatApp.csproj", "{0FE952E2-93FF-4690-9894-AB27C3C9A949}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FE952E2-93FF-4690-9894-AB27C3C9A949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FE952E2-93FF-4690-9894-AB27C3C9A949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FE952E2-93FF-4690-9894-AB27C3C9A949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FE952E2-93FF-4690-9894-AB27C3C9A949}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5A307E3-2051-4310-84C7-F6DEB5E62E5C}
+	EndGlobalSection
+EndGlobal
